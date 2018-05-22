@@ -1,0 +1,153 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fcf7fb;
+}
+
+h2 { font-size: 42px; color: #b11061; margin:0; }
+h4 { font-size: 20px; color: #b11061; margin:0; }
+h1 {margin:0;}
+
+.blanco {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #5b5b5b;
+  font-weight: 200;
+  font-size: 63px;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.rosa {
+  color: #B11061;
+  text-shadow: 1px 1px 2px #5b5b5b;
+  font-weight: bolder;
+  font-size: 74px;
+  text-align: center;
+  margin-top: -12px;
+}
+
+.container {
+  display:flex;
+	flex-direction:column;
+	justify-content:center;
+  max-width: 640px;
+  margin:auto;
+  padding-bottom: 160px;
+  padding-top: 40px;
+  /*border:2px #000000 solid;*/
+}
+
+.recuadro > img {
+  text-align: center;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position:relative;
+  top:-50px;
+}
+
+.recuadro {
+  margin-top: 40px;
+  background-color: #F6A216;
+  height: 260px;
+}
+
+.bloque1 {margin-top:30px;}
+
+.bloque1 img + img {
+  margin-top: 56px;
+  max-width: 230px;
+}
+
+.bloque1 > img {
+  float: right;
+  margin-top: 10px;
+  max-width: 360px;
+}
+
+.bloque2 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 22px;
+  line-height: 1.4em;
+}
+
+.bloque2 strong { font-size: 28px;}
+.bloque2 > img {width: 100%; margin-top:30px}
+.bloque3 p {text-align: justify;}
+
+.map { grid-area:map; display: inline-block; max-height: 150px;}
+.gift { grid-area:gift;display: inline-block; max-height: 120px; margin-bottom: 20px}
+.sum { grid-area:sum;display: inline-block; max-height: 120px;}
+.geo { grid-area:geo; }
+.gratis { grid-area:gratis;}
+.publi { grid-area:publi;}
+
+.bloque3{
+  font-size: 1em;
+  background-color: #fcf7fb;
+  border: 3px #b11061 solid;
+  width: 82%;
+  padding: 8%;
+  height: 520px;
+  box-shadow: 1px 1px 10px #937686;
+  align-self:center;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 265px);
+  align-items: center;
+	grid-template-areas:
+  "map geo"
+  "gift gratis"
+  "sum publi";
+}
+
+.bloque4 {
+  margin-top: 100px;
+  align-self:center;
+  text-align: center;
+}
+
+.bloque4 p {font-size: 28px; margin-top: 96px;}
+
+.click {
+  background-color: #b11061;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 2px;
+}
+
+.click:hover{
+  background-color: #f4a40f;
+}
+
+/* Mobile */
+
+@media screen and (max-width:640px)
+{
+  .bloque1 {text-align: center;}
+  .bloque1 img {float: none;max-width: 86%;}
+
+  .bloque2 h2 {line-height: 42px;}
+
+  .bloque3 {display: block; overflow: hidden; height: 940px; text-align: center; text-size:18px;}
+  .map, .gift, .sum {display: block; height: 150px; margin: 20px auto; position: relative;}
+  .geo, .gratis, .publi {height: 150px; position: relative;}
+  .geo p, .gratis p, .publi p {text-align: center;}
+  .gift {top:150px;}
+  .sum {top: 300px;}
+  .geo {top: -288px;}
+  .gratis {top:-146px;}
+
+  .bloque4 > img{
+  max-width: 86%;}
+  .bloque4 .click {
+    max-width: 60%;
+  }
+}
